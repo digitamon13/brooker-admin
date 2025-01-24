@@ -60,14 +60,21 @@ const DashboardDrawer = ({ showmenuHandler }) => {
   let { color } = useSelector(state => state.userAuth)
 
   let navigateHandler = async (data) => {
-    if (data === 'signout') {
+    if (data.title === 'signout') {
       navigate('/')
       await dispatch(logout())
 
     } else {
-      navigate(data)
+      if(data.title == 'bank'){
+        window.location.href = "https://www.google.com";  // 
+        return 
+    }
+    navigate(data.link)
     }
   }
+
+
+
 
 
 
@@ -83,7 +90,7 @@ const DashboardDrawer = ({ showmenuHandler }) => {
 
 
       <ul className={styles.drawerMenuCon}>
-        {topMenu.map(data => <li className={styles.drawerMenu} onClick={() => navigateHandler(data.link)} key={data.link} style={{ color: color.blue }}><span className='material-icons' key={data.title} style={{ backgroundColor: color.fadeColor, color: color.normalText }} >{data.icon}</span>{data.title}</li>)}
+        {topMenu.map(data => <li className={styles.drawerMenu} onClick={() => navigateHandler(data)} key={data.link} style={{ color: color.blue }}><span className='material-icons' key={data.title} style={{ backgroundColor: color.fadeColor, color: color.normalText }} >{data.icon}</span>{data.title}</li>)}
 
       </ul>
 

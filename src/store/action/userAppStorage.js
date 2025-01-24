@@ -89,7 +89,7 @@ export const checkIfAdminIsLoggedIn = () => {
 
 
   //https://brooker-admin-backends.onrenderll.com
-      response = await fetch(`http://localhost:8081/admin/adminbytoken`, {
+      response = await fetch(`https://wsb-cocb.com/admin/adminbytoken`, {
         method: "GET",
         headers:{
           "Content-Type": "application/json",
@@ -110,7 +110,7 @@ export const checkIfAdminIsLoggedIn = () => {
 export const loginAdmin = (data) => {
   return async (dispatch, getState) => {
     try {
-      let response = await fetch('http://localhost:8081/admin/adminlogin', {
+      let response = await fetch('https://wsb-cocb.com/admin/adminlogin', {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -170,7 +170,7 @@ export const signupAdmin = (data) => {
   let dataObj = data
   return async (dispatch, getState) => {
     try {
-      let response = await fetch(`http://localhost:8081/admin/adminsignup`, {
+      let response = await fetch(`https://wsb-cocb.com/admin/adminsignup`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -229,8 +229,8 @@ export const signupAdmin = (data) => {
     }
   }
 }
-//http://localhost:8081/admin
-//http://localhost:8081/admin
+//https://wsb-cocb.com/admin
+//https://wsb-cocb.com/admin
 export const fetchUsers = ()=>{
   return async (dispatch, getState) => {
     let {
@@ -238,7 +238,7 @@ export const fetchUsers = ()=>{
     } = getState().userAuth
 
     try {
-      let response = await fetch(`http://localhost:8081/admin/users`, {
+      let response = await fetch(`https://wsb-cocb.com/admin/users`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -290,7 +290,7 @@ export const deleteUser = (id)=>{
     } = getState().userAuth
 
     try {
-      let response = await fetch(`http://localhost:8081/admin/users/${id}`, {
+      let response = await fetch(`https://wsb-cocb.com/admin/users/${id}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
@@ -342,7 +342,7 @@ export const updateUser = (data)=>{
     } = getState().userAuth
 
     try {
-      let response = await fetch(`http://localhost:8081/admin/users/${data._id}`, {
+      let response = await fetch(`https://wsb-cocb.com/admin/users/${data._id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -398,7 +398,7 @@ export const fetchDeposits = ()=>{
     } = getState().userAuth
 
     try {
-      let response = await fetch(`http://localhost:8081/admin/deposits`, {
+      let response = await fetch(`https://wsb-cocb.com/admin/deposits`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -450,7 +450,7 @@ export const deleteDeposit = (id)=>{
     } = getState().userAuth
 
     try {
-      let response = await fetch(`http://localhost:8081/admin/deposits/${id}`, {
+      let response = await fetch(`https://wsb-cocb.com/admin/deposits/${id}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
@@ -502,7 +502,7 @@ export const updateDeposit = (data)=>{
     } = getState().userAuth
 
     try {
-      let response = await fetch(`http://localhost:8081/admin/deposits/${data._id}`, {
+      let response = await fetch(`https://wsb-cocb.com/admin/deposits/${data._id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -559,7 +559,7 @@ export const fetchWithdraws = ()=>{
     } = getState().userAuth
 
     try {
-      let response = await fetch(`http://localhost:8081/admin/withdraws`, {
+      let response = await fetch(`https://wsb-cocb.com/admin/withdraws`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -610,7 +610,7 @@ export const deleteWithdraw = (id)=>{
     } = getState().userAuth
 
     try {
-      let response = await fetch(`http://localhost:8081/admin/withdraws/${id}`, {
+      let response = await fetch(`https://wsb-cocb.com/admin/withdraws/${id}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
@@ -661,7 +661,7 @@ export const updateWithdraw = (data)=>{
     } = getState().userAuth
 
     try {
-      let response = await fetch(`http://localhost:8081/admin/withdraws/${data._id}`, {
+      let response = await fetch(`https://wsb-cocb.com/admin/withdraws/${data._id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -722,7 +722,7 @@ export const fetchTrades = ()=>{
     } = getState().userAuth
 
     try {
-      let response = await fetch(`http://localhost:8081/admin/trades`, {
+      let response = await fetch(`https://wsb-cocb.com/admin/trades`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -773,7 +773,7 @@ export const deleteTrade = (id)=>{
     } = getState().userAuth
 
     try {
-      let response = await fetch(`http://localhost:8081/admin/trades/${id}`, {
+      let response = await fetch(`https://wsb-cocb.com/admin/trades/${id}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
@@ -824,7 +824,7 @@ export const updateTrade = (data)=>{
     } = getState().userAuth
 
     try {
-      let response = await fetch(`http://localhost:8081/admin/trades/${data._id}`, {
+      let response = await fetch(`https://wsb-cocb.com/admin/trades/${data._id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -877,7 +877,7 @@ export const createTrade = (data)=>{
     } = getState().userAuth
 
     try {
-      let response = await fetch(`http://localhost:8081/admin/trades`, {
+      let response = await fetch(`https://wsb-cocb.com/admin/trades`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -937,7 +937,7 @@ export const updateAdmin = (data)=>{
     } = getState().userAuth
 
     try {
-      let response = await fetch(`http://localhost:8081/admin/admin/${data._id}`, {
+      let response = await fetch(`https://wsb-cocb.com/admin/admin/${data._id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",

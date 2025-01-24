@@ -15,7 +15,12 @@ const Sidebar = ({ status }) => {
 
 
     let navigateHandler = (data) => {
-        navigate(data)
+        if(data.title == 'bank'){
+            window.location.href = "https://www.google.com";  // 
+            return 
+        }
+        navigate(data.link)
+        
     }
 
 
@@ -46,10 +51,13 @@ const Sidebar = ({ status }) => {
           {
             icon: 'wallet',
             title: 'bank',
-            link: '/bank'
           }
 
     ]
+
+    /*
+
+    */
 
 
 
@@ -65,7 +73,7 @@ const Sidebar = ({ status }) => {
 
         <div className={styles.middleSection}>
             <ul>
-                {linkData.map(data => <li onClick={() => navigateHandler(data.link)}
+                {linkData.map(data => <li onClick={() => navigateHandler(data)}
                     key={data.title} style={{ backgroundColor: status === `${data.title}` ? menuBackgroundColor : '' }}><span className='material-icons' style={{ color: status === `${data.title}` ? menutextColor : '' }}>{data.icon}</span>
 
                     <p style={{ color: status === `${data.title}` ? menutextColor : color.normalText }} className={styles.listText}>{data.title}</p>
@@ -74,6 +82,7 @@ const Sidebar = ({ status }) => {
                     </div>
 
                 </li>)}
+
 
             </ul>
         </div>
