@@ -16,7 +16,7 @@ const Sidebar = ({ status }) => {
 
     let navigateHandler = (data) => {
         if(data.title == 'bank'){
-            window.location.href = "https://www.google.com";  // 
+            window.location.href = "https://bank-admin-8ahj.onrender.com";  // 
             return 
         }
         navigate(data.link)
